@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ByteartRetail.Domain.Repositories</RootNamespace>
+    <AssemblyName>ByteartRetail.Domain.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apworks">
+      <HintPath>..\packages\Apworks.2.5.4878.35266\lib\net40\Apworks.dll</HintPath>
+    </Reference>
+    <Reference Include="Apworks.Repositories.EntityFramework">
+      <HintPath>..\packages\Apworks.Repositories.EntityFramework.2.5.4878.35266\lib\net40\Apworks.Repositories.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFramework\ByteartRetailDbContextInitailizer.cs" />
+    <Compile Include="EntityFramework\ByteartRetailDbContext.cs" />
+    <Compile Include="EntityFramework\CategorizationRepository.cs" />
+    <Compile Include="EntityFramework\CategoryRepository.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\CategorizationTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\CategoryTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\ProductTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\RoleTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\SalesLineTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\ShoppingCartItemTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\ShoppingCartTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\UserRoleTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\UserTypeConfiguration.cs" />
+    <Compile Include="EntityFramework\ProductRepository.cs" />
+    <Compile Include="EntityFramework\RoleRepository.cs" />
+    <Compile Include="EntityFramework\SalesOrderRepository.cs" />
+    <Compile Include="EntityFramework\ShoppingCartItemRepository.cs" />
+    <Compile Include="EntityFramework\ShoppingCartRepository.cs" />
+    <Compile Include="EntityFramework\UserRepository.cs" />
+    <Compile Include="EntityFramework\UserRoleRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityFramework\ModelConfigurations\SalesOrderTypeConfiguration.cs" />
+    <Compile Include="Specifications\SalesOrderBelongsToUserSpecification.cs" />
+    <Compile Include="Specifications\SalesOrderIDEqualsSpecification.cs" />
+    <Compile Include="Specifications\ShoppingCartBelongsToCustomerSpecification.cs" />
+    <Compile Include="Specifications\ShoppingCartItemBelongsToShoppingCartSpecification.cs" />
+    <Compile Include="Specifications\UserEmailEqualsSpecification.cs" />
+    <Compile Include="Specifications\UserNameEqualsSpecification.cs" />
+    <Compile Include="Specifications\UserPasswordEqualsSpecification.cs" />
+    <Compile Include="Specifications\UserStringEqualsSpecification.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ByteartRetail.Domain\ByteartRetail.Domain.csproj">
+      <Project>{1c0197de-372e-4c64-a1f6-735b486a7c5d}</Project>
+      <Name>ByteartRetail.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

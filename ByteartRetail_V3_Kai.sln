@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Domain", "ByteartRetail.Domain\ByteartRetail.Domain.csproj", "{1C0197DE-372E-4C64-A1F6-735B486A7C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Infrastructure", "ByteartRetail.Infrastructure\ByteartRetail.Infrastructure.csproj", "{96970193-2F74-4A31-B02E-5A68B1A254B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Domain.Repositories", "ByteartRetail.Domain.Repositories\ByteartRetail.Domain.Repositories.csproj", "{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.DataObjects", "ByteartRetail.DataObjects\ByteartRetail.DataObjects.csproj", "{216D8E0B-0842-4937-9834-898C52F8CD7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.ServiceContracts", "ByteartRetail.ServiceContracts\ByteartRetail.ServiceContracts.csproj", "{5F44839F-BCEB-4B4B-96ED-F848ED38E242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Infrastructure.Caching", "ByteartRetail.Infrastructure.Caching\ByteartRetail.Infrastructure.Caching.csproj", "{FFAA8DAC-030E-4351-A52E-711841656FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Application", "ByteartRetail.Application\ByteartRetail.Application.csproj", "{05F0813A-1F31-4D91-9241-5CB4F54C391C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Events.Handlers", "ByteartRetail.Events.Handlers\ByteartRetail.Events.Handlers.csproj", "{D18D02A9-F7A2-4DFB-B72B-D724F7E788AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Services.WCF", "ByteartRetail.Services.WCF\ByteartRetail.Services.WCF.csproj", "{534069F8-C8C0-4DE8-984A-96E7DB0E676E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Events", "ByteartRetail.Events\ByteartRetail.Events.csproj", "{2A7EA632-335A-4EDE-8FC3-7DBA7F54C169}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteartRetail.Web.MVC", "ByteartRetail.Web.MVC\ByteartRetail.Web.MVC.csproj", "{1395D3E8-7031-419A-AC6F-F6FC84D037F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C0197DE-372E-4C64-A1F6-735B486A7C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0197DE-372E-4C64-A1F6-735B486A7C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0197DE-372E-4C64-A1F6-735B486A7C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0197DE-372E-4C64-A1F6-735B486A7C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96970193-2F74-4A31-B02E-5A68B1A254B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96970193-2F74-4A31-B02E-5A68B1A254B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96970193-2F74-4A31-B02E-5A68B1A254B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96970193-2F74-4A31-B02E-5A68B1A254B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1825F0C-8A0D-4FFF-B769-71ACD9C317EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216D8E0B-0842-4937-9834-898C52F8CD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216D8E0B-0842-4937-9834-898C52F8CD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216D8E0B-0842-4937-9834-898C52F8CD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216D8E0B-0842-4937-9834-898C52F8CD7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F44839F-BCEB-4B4B-96ED-F848ED38E242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F44839F-BCEB-4B4B-96ED-F848ED38E242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F44839F-BCEB-4B4B-96ED-F848ED38E242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F44839F-BCEB-4B4B-96ED-F848ED38E242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFAA8DAC-030E-4351-A52E-711841656FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFAA8DAC-030E-4351-A52E-711841656FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFAA8DAC-030E-4351-A52E-711841656FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFAA8DAC-030E-4351-A52E-711841656FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F0813A-1F31-4D91-9241-5CB4F54C391C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F0813A-1F31-4D91-9241-5CB4F54C391C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F0813A-1F31-4D91-9241-5CB4F54C391C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F0813A-1F31-4D91-9241-5CB4F54C391C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18D02A9-F7A2-4DFB-B72B-D724F7E788AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18D02A9-F7A2-4DFB-B72B-D724F7E788AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18D02A9-F7A2-4DFB-B72B-D724F7E788AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18D02A9-F7A2-4DFB-B72B-D724F7E788AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534069F8-C8C0-4DE8-984A-96E7DB0E676E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534069F8-C8C0-4DE8-984A-96E7DB0E676E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534069F8-C8C0-4DE8-984A-96E7DB0E676E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534069F8-C8C0-4DE8-984A-96E7DB0E676E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7EA632-335A-4EDE-8FC3-7DBA7F54C169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7EA632-335A-4EDE-8FC3-7DBA7F54C169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7EA632-335A-4EDE-8FC3-7DBA7F54C169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7EA632-335A-4EDE-8FC3-7DBA7F54C169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1395D3E8-7031-419A-AC6F-F6FC84D037F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1395D3E8-7031-419A-AC6F-F6FC84D037F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1395D3E8-7031-419A-AC6F-F6FC84D037F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1395D3E8-7031-419A-AC6F-F6FC84D037F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

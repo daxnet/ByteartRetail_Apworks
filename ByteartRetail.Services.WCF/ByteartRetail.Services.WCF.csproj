@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{534069F8-C8C0-4DE8-984A-96E7DB0E676E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ByteartRetail.Services.WCF</RootNamespace>
+    <AssemblyName>ByteartRetail.Services.WCF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apworks">
+      <HintPath>..\packages\Apworks.2.5.4878.35266\lib\net40\Apworks.dll</HintPath>
+    </Reference>
+    <Reference Include="Apworks.ObjectContainers.Unity">
+      <HintPath>..\packages\Apworks.ObjectContainers.Unity.2.5.4878.35266\lib\net40\Apworks.ObjectContainers.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Apworks.Repositories.EntityFramework, Version=2.5.4878.35266, Culture=neutral, PublicKeyToken=6ac07c8a9fd15b21, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Apworks.Repositories.EntityFramework.2.5.4878.35266\lib\net40\Apworks.Repositories.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ByteartRetail.mdf" />
+    <Content Include="App_Data\ByteartRetail_log.ldf">
+      <DependentUpon>ByteartRetail.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="OrderService.svc" />
+    <Content Include="PostbackService.svc" />
+    <Content Include="ProductService.svc" />
+    <Content Include="UserService.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="OrderService.svc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderService.svc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostbackService.svc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostbackService.svc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductService.svc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductService.svc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.svc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserService.svc.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Common.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.cs</LastGenOutput>
+    </Content>
+    <Content Include="OrderService.svc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OrderService.svc.cs</LastGenOutput>
+    </Content>
+    <Content Include="PostbackService.svc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PostbackService.svc.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProductService.svc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ProductService.svc.cs</LastGenOutput>
+    </Content>
+    <Content Include="UserService.svc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserService.svc.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ByteartRetail.Application\ByteartRetail.Application.csproj">
+      <Project>{05f0813a-1f31-4d91-9241-5cb4f54c391c}</Project>
+      <Name>ByteartRetail.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.DataObjects\ByteartRetail.DataObjects.csproj">
+      <Project>{216d8e0b-0842-4937-9834-898c52f8cd7a}</Project>
+      <Name>ByteartRetail.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Domain.Repositories\ByteartRetail.Domain.Repositories.csproj">
+      <Project>{a1825f0c-8a0d-4fff-b769-71acd9c317ef}</Project>
+      <Name>ByteartRetail.Domain.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Domain\ByteartRetail.Domain.csproj">
+      <Project>{1c0197de-372e-4c64-a1f6-735b486a7c5d}</Project>
+      <Name>ByteartRetail.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Events.Handlers\ByteartRetail.Events.Handlers.csproj">
+      <Project>{d18d02a9-f7a2-4dfb-b72b-d724f7e788ac}</Project>
+      <Name>ByteartRetail.Events.Handlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Events\ByteartRetail.Events.csproj">
+      <Project>{2a7ea632-335a-4ede-8fc3-7dba7f54c169}</Project>
+      <Name>ByteartRetail.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Infrastructure.Caching\ByteartRetail.Infrastructure.Caching.csproj">
+      <Project>{ffaa8dac-030e-4351-a52e-711841656fb8}</Project>
+      <Name>ByteartRetail.Infrastructure.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.Infrastructure\ByteartRetail.Infrastructure.csproj">
+      <Project>{96970193-2F74-4A31-B02E-5A68B1A254B0}</Project>
+      <Name>ByteartRetail.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ByteartRetail.ServiceContracts\ByteartRetail.ServiceContracts.csproj">
+      <Project>{5f44839f-bceb-4b4b-96ed-f848ed38e242}</Project>
+      <Name>ByteartRetail.ServiceContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16825</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:13995/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
