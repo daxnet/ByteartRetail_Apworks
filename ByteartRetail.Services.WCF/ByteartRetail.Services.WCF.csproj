@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +43,9 @@
   <ItemGroup>
     <Reference Include="Apworks">
       <HintPath>..\packages\Apworks.2.5.4878.35266\lib\net40\Apworks.dll</HintPath>
+    </Reference>
+    <Reference Include="Apworks.Bus.EventAggregator">
+      <HintPath>..\packages\Apworks.Bus.EventAggregator.2.5.4878.35266\lib\net40\Apworks.Bus.EventAggregator.dll</HintPath>
     </Reference>
     <Reference Include="Apworks.ObjectContainers.Unity">
       <HintPath>..\packages\Apworks.ObjectContainers.Unity.2.5.4878.35266\lib\net40\Apworks.ObjectContainers.Unity.dll</HintPath>
@@ -187,10 +192,6 @@
       <Project>{d18d02a9-f7a2-4dfb-b72b-d724f7e788ac}</Project>
       <Name>ByteartRetail.Events.Handlers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ByteartRetail.Events\ByteartRetail.Events.csproj">
-      <Project>{2a7ea632-335a-4ede-8fc3-7dba7f54c169}</Project>
-      <Name>ByteartRetail.Events</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ByteartRetail.Infrastructure.Caching\ByteartRetail.Infrastructure.Caching.csproj">
       <Project>{ffaa8dac-030e-4351-a52e-711841656fb8}</Project>
       <Name>ByteartRetail.Infrastructure.Caching</Name>
@@ -232,6 +233,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
